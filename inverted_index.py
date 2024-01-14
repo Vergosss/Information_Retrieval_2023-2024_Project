@@ -9,7 +9,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 doc_files=[] #ta keimena os stixia listas
 #
 official_stop_words = set(stopwords.words("english"))
-doc_path = os.getcwd() + "/Collection/docs"
+doc_path = os.getcwd() + "\\Collection\\docs"
 
 #
 print(doc_path)
@@ -61,9 +61,9 @@ inverted_index = {}
 for i,doc in enumerate(doc_files): #gia kathe keimeno arxika pare to idio to keimeno kai th thesh tou sth lista keimenon
     for word in doc.split():#gia kathe leksi sto ekastote keimeno
         if word in inverted_index:#
-            inverted_index[word].add(i+1)#an einai hdh sth lista prosthese to id tou keimenou pou vrisketai h leksi
+            inverted_index[word].add(i)#an einai hdh sth lista prosthese to id tou keimenou pou vrisketai h leksi
         else:
-            inverted_index[word] = {i+1}#an den einai sth lista o oros tote prosthese thn emfanisi tou sto keimeno doc
+            inverted_index[word] = {i}#an den einai sth lista o oros tote prosthese thn emfanisi tou sto keimeno doc
 
 #for i,doc in enumerate(doc_files):
 	#print(i,doc)
