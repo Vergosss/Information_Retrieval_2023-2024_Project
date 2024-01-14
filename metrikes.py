@@ -44,7 +44,7 @@ for i in range(len(Ids)):
 # to query
 
 #
-##------ftiaxno tous synolikous pinakes-######
+##------ftiaxno tous synolikous pinakes-#######
 
 table_of_results = pd.DataFrame({'Doc id':Ids,'Score':score,'Rank':rank})#pinakas me ta apotelesmata tou query to
 table_of_metrics = pd.DataFrame({'Rank':sorted_rank,'Doc id':Ids_sorted,'Relevant':relevant_or_not,'Precision':Precision,'Recall':Recall})#
