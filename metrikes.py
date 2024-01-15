@@ -16,9 +16,10 @@ print(sorted_indexes)
 #
 Ids_sorted = Ids[sorted_indexes]#taxinomimena keimena vash tou score
 #sprint(Ids_sorted)
-rank = rankdata(score,'ordinal')
+rank = rankdata(score,'max')
+ranks = len(rank) - rank + 1
 #tha paei me vash to score
-print(rank)
+print(ranks)
 
 ###----pinakas pou deixnei an to i osto keimeno anikei sta sxetika---###
 relevant_or_not = np.zeros(len(Ids),dtype=bool)
@@ -46,7 +47,7 @@ for i in range(len(Ids)):
 #
 ##------ftiaxno tous synolikous pinakes-#######
 
-table_of_results = pd.DataFrame({'Doc id':Ids,'Score':score,'Rank':rank})#pinakas me ta apotelesmata tou query to
+table_of_results = pd.DataFrame({'Doc id':Ids,'Score':score,'Rank':ranks})#pinakas me ta apotelesmata tou query to
 table_of_metrics = pd.DataFrame({'Rank':sorted_rank,'Doc id':Ids_sorted,'Relevant':relevant_or_not,'Precision':Precision,'Recall':Recall})#
 
 #pinakas ton keimenon taxinomimena vash tou rank tous(vash tou score) mazi me tis times ton precision-recall
@@ -54,7 +55,7 @@ print(table_of_results)
 print(table_of_metrics)
 ##----PLOTTING-----##
 def Precision_Recall_Graph(precision,recall):
-    plt.plot(recall,precision,marker='x',linestyle='-')
+    plt.plot(recall,precision,marker='x',linestyle='--')
     plt.xlabel('Recall')
     plt.ylabel('Precision')
     plt.title('Precision vs Recall')
