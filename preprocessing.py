@@ -6,7 +6,7 @@ import unidecode
 doc_files=[] #ta keimena os stixia listas
 #
 #official_stop_words = set(stopwords.words("english"))
-doc_path = os.getcwd() + "/Collection/docs"
+doc_path = os.getcwd() + "\\Collection\\docs"
 
 #
 print(doc_path)

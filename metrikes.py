@@ -10,7 +10,7 @@ relevant_docs = np.array(relevant_docs)
 R = len(relevant_docs) #plithos sxetikon me to query keimenon-synolo R
 score = [3,5,1,4,10,20,0,9]#pinakas me ta score ton keimenon sto query tha borouse na einai to cosine simularity
 score = np.array(score)
-sorted_indexes = np.flip(np.argsort(score))#me thn flip pernoume se fthinousa seira ta indees tou score: max score-...min score
+sorted_indexes = np.flip(np.argsort(score))#me thn flip pernoume se fthinousa seira ta indeχes tou score: max score-...min score
 ###
 print(sorted_indexes)
 #
