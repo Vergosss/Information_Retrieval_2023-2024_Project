@@ -2,7 +2,7 @@ import os #vivliothiki gia diavasma arxeion
 doc_files=[] #ta keimena os stixia listas
 #
 
-doc_path = os.getcwd() + "\\Collection\\docs" #kataskeyi tou monopatiou pou vriskontai ta keimena
+doc_path = os.getcwd() + "/Collection/docs" #kataskeyi tou monopatiou pou vriskontai ta keimena
 #
 print(doc_path)#ektyposi aytou tou monopatiou
 for file in sorted(os.listdir(doc_path)):#gia kathe string(noumero) ths listas tou path
