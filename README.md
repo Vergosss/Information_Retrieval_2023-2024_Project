@@ -1,0 +1,2 @@
+This the repository for the 2023-2024 project for the fall semester elective course 'Information Retrieval'. Firstly an inverted index is implemented in Python. Next,  i implement the Vector Space Model on a collection of documents and run similarity queries on it. The model's performance is evaluated using Precision and Recall metrics. Finally the Vector Space Model is compared with Standford's implementation of colBERT.
+The repository includes the project report and the source code.
